@@ -16,52 +16,41 @@
             <li>おすすめ情報</li>
         </header>
     
-    <div class="container">
-        <h1>どういう働き方を希望しますか。</h1>
-        
-        <div class="block">
+        <div class="container">
+            <h1>どういう働き方を希望しますか。</h1>
             
-            <div class="joudan">
-                <a id="kigyou" class="number" data-number="1" href="#">起業したい</a>
-                <p id="jigyoushoukei" class="number" data-number="2" href="#">事業承継したい</p>
-                <p id="fukugyou" class="number" data-number="3" href="#">副業したい</p>
+            <div class="block">
+                
+                <div class="joudan">
+                    <a id="kigyou" class="number" data-number="1" href="#">起業したい</a>
+                    <p id="jigyoushoukei" class="number" data-number="2" href="#">事業承継したい</p>
+                    <p id="fukugyou" class="number" data-number="3" href="#">副業したい</p>
+                </div>
+
+                <div class="gedan">
+                    <p id="gyoumu" class="number" data-number="4" href="#">業務を受けたい</p>
+                    <p id="bora" class="number" data-number="5" href="#">ボランティアしたい</p>
+                </div>
             </div>
 
-            <div class="gedan">
-                <p id="gyoumu" class="number" data-number="4" href="#">業務を受けたい</p>
-                <p id="bora" class="number" data-number="5" href="#">ボランティアしたい</p>
-            </div>
         </div>
 
-        <!-- 枠 -->
-    <div id="result-frame">
-    クリックして結果を表示
-    </div>
-
-        <!-- 結果を表示する要素 -->
-    <div id="result"></div>
+        <div id="result"></div> <!-- クリックされた数値を表示する場所 -->
 
     </div>
 
-    <div class="next">
-        <button>
-            <li><a class="tsugi" href="#">次へ</a></li>
-        </button>
-    </div>
-
-    </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script>
-        // 枠がクリックされたときの処理
-        $("#result-frame").click(function() {
-            // ここにクリックされたときの処理を記述
-            // 例えば、結果を設定する
-            $("#result").text("クリックされました！");
+<script>
+    $(document).ready(function() {
+        $(".number").click(function() {
+            var clickedNumber = $(this).data("number");
+            console.log("クリックされた数値: " + clickedNumber);
+            $("#result").text("クリックされた数値: " + clickedNumber);
         });
-    </script>
+    });
+</script>
 
 </body>
 </html>
