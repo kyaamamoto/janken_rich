@@ -1,0 +1,221 @@
+
+
+#wrap {
+    max-width: auto;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #223a70;
+    color: white;
+    font-weight: bold;
+    padding: 30px 80px;
+    font-size: 25px;
+}
+
+.red {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 60px;
+}
+
+#kigyou {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/kigyou.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    animation: floating-y 2.0s ease-in-out infinite alternate-reverse;
+  }
+
+  #kigyou:hover {
+    opacity:0.5;
+    transform:scale(1.3);
+	transition:0.3s;
+  }
+
+  #jigyoushoukei {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/jigyoushoukei.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    animation: floating-y 1.8s ease-in-out infinite alternate;
+  }
+
+  #jigyoushoukei:hover {
+    opacity:0.5;
+    transform:scale(1.3);
+	transition:0.3s;
+  }
+
+  #fukugyou {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/fukugyou.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    animation: floating-y 2.5s ease-in-out infinite alternate-reverse;
+  }
+
+  #fukugyou:hover {
+    opacity:0.5;
+    transform:scale(1.3);
+	transition:0.3s;
+  }
+
+  #gyoumu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/gyoumu.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    animation: floating-y 1.8s ease-in-out infinite alternate;
+  }
+
+  #gyoumu:hover {
+    opacity:0.5;
+    transform:scale(1.3);
+	transition:0.3s;
+  }
+
+  #bora {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/bora.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
+  }
+
+  #bora:hover {
+    opacity:0.5;
+    transform:scale(1.3);
+	transition:0.3s;
+  }
+
+  /* .block {
+    padding-top: 50px;
+    animation: floating-x 7.2s ease-in-out infinite alternate-reverse;
+  } */
+
+  .joudan,
+  .gedan {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    row-gap: 100px;
+  }
+
+  .joudan {
+    padding-top: 50px;
+    animation: floating-x 8.2s ease-in-out infinite alternate-reverse;
+  }
+  
+
+  .gedan {
+    padding-top: 80px;
+    animation: floating-x 6.2s ease-in-out infinite alternate;
+  }
+  
+
+  @keyframes floating-x {
+    0% {
+      transform: translateX(-5%);
+    }
+    100% {
+      transform: translateX(5%);
+    }
+  }
+
+  @keyframes floating-y {
+    0% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(10%);
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    color: white;
+}
+
+.next {
+    text-align: right;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    color: white;
+}
+
+
+.tsugi {
+    color: white;
+    text-decoration: none;
+}
+
+.modoru {
+    color: white;
+    text-decoration: none;
+}
+
+  button {
+    border-radius: 5%;
+    background-color: #223a70;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    list-style: none;
+  }
+
+
+
