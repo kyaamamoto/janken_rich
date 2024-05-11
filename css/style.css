@@ -218,4 +218,10 @@ h1 {
   }
 
 
-
+ /* 枠のスタイル */
+ #result-frame {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer; /* カーソルをポインターに変更 */
+}

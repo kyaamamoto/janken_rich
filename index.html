@@ -33,15 +33,34 @@
             </div>
         </div>
 
+        <!-- 枠 -->
+    <div id="result-frame">
+    クリックして結果を表示
+    </div>
+
+        <!-- 結果を表示する要素 -->
+    <div id="result"></div>
+
     </div>
 
     <div class="next">
         <button>
-            <li><a class="tsugi" href="/want.html">次へ</a></li>
+            <li><a class="tsugi" href="#">次へ</a></li>
         </button>
     </div>
 
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        // 枠がクリックされたときの処理
+        $("#result-frame").click(function() {
+            // ここにクリックされたときの処理を記述
+            // 例えば、結果を設定する
+            $("#result").text("クリックされました！");
+        });
+    </script>
 
 </body>
 </html>
