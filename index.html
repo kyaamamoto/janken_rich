@@ -10,26 +10,27 @@
 <body>
     <div id="wrap">
         <header>
-            <li>Q1.働き方</li>
-            <li>Q2.やりたいこと</li>
-            <li>Q3.関わり方</li>
-            <li>おすすめ情報</li>
+                    <li class="t1">Q1.働き方</li>
+                    <li class="t2">Q2.やりたいこと</li>
+                    <li class="t3">Q3.希望エリア</li>
+                    <li class="t4">おすすめ情報</li>
         </header>
     
-        <div class="section1">
-            <h1>どういう働き方を希望しますか。</h1>
+<!-- section1 -->
+        <div id="section1">
+            <h1 class="s1">どういう働き方を希望しますか。</h1>
             
             <div class="block">
                 
                 <div class="joudan">
-                    <a id="kigyou" class="number" data-number="1" href="#">起業したい</a>
-                    <a id="jigyoushoukei" class="number" data-number="2" href="#">事業承継したい</a>
-                    <a id="fukugyou" class="number" data-number="3" href="#">副業したい</a>
+                    <a id="kigyou" class="number" data-number="1" href="#">起業</a>
+                    <a id="jigyoushoukei" class="number" data-number="2" href="#">事業承継</a>
+                    <a id="fukugyou" class="number" data-number="3" href="#">副業・兼業</a>
                 </div>
 
                 <div class="gedan">
-                    <a id="gyoumu" class="number" data-number="4" href="#">業務を受けたい</a>
-                    <a id="bora" class="number" data-number="5" href="#">ボランティアしたい</a>
+                    <a id="gyoumu" class="number" data-number="4" href="#">業務委託</a>
+                    <a id="bora" class="number" data-number="5" href="#">ボランティア</a>
                 </div>
             </div>
 
@@ -40,13 +41,71 @@
             <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
         </div>
 
-        <div>次へ</div>
     </div>
 
 
+<!-- section2 -->
+    <div id="section2">
+        <h1 class="s2">どういうことをやりたいですか。</h1>
+        
+        <div class="block">
+            
+            <div class="joudan">
+                <a id="bousai" class="number2" data-number="6" href="#section2">防災・防犯</a>
+                <a id="kosodate" class="number2" data-number="7" href="#section2">子育て支援</a>
+                <a id="fukushi" class="number2" data-number="8" href="#section2">福祉・保健衛生</a>
+            </div>
 
-    <div class="section2">
-        <h1>どういう働き方を希望しますか。</h1>
+            <div class="gedan">
+                <a id="kankyou" class="number2" data-number="9" href="#section2">環境対策</a>
+                <a id="bunka" class="number2" data-number="10" href="#section2">地域活性化・文化振興</a>
+                <a id="toshi" class="number2" data-number="11" href="#section2">都市基盤</a>
+                <a id="kyouiku" class="number2" data-number="12" href="#section2">教育</a>
+            </div>
+        </div>
+
+   
+
+        <div id="kekka2">
+            <div id="koumoku">選択した働き方</div>
+            <div id="result2">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
+        </div>
+
+    </div>
+
+<!-- section3 -->
+    <div id="section3">
+        <h1 class="s3">どのエリアを希望しますか。</h1>
+        
+        <div class="block">
+            
+            <div class="joudan">
+                <a id="hokkaido" class="number3" data-number="13" href="#section3">北海道</a>
+                <a id="tohoku" class="number3" data-number="14" href="#section3">東北</a>
+                <a id="kanto" class="number3" data-number="15" href="#section3">関東</a>
+                <a id="chubu" class="number3" data-number="16" href="#section3">中部</a>
+            </div>
+
+            <div class="gedan">
+                <a id="kinki" class="number3" data-number="17" href="#section3">近畿</a>
+                <a id="chugoku" class="number3" data-number="18" href="#section3">中国</a>
+                <a id="shikoku" class="number3" data-number="19" href="#section3">四国</a>
+                <a id="kyushu" class="number3" data-number="20" href="#section3">九州・沖縄</a>
+            </div>
+        </div>
+
+   
+
+        <div id="kekka">
+            <div id="koumoku">選択した働き方</div>
+            <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
+        </div>
+
+    </div>
+
+<!-- section4 -->
+    <div id="section4">
+        <h1 class="s4">あなたに最適な情報はこちら</h1>
         
         <div class="block">
             
@@ -62,15 +121,12 @@
             </div>
         </div>
 
-   
+
 
         <div id="kekka">
             <div id="koumoku">選択した働き方</div>
             <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
         </div>
-
-        <div>次へ</div>
-    </div>
 
 
     </div>
@@ -96,28 +152,111 @@
             // $("#result").text("選択した働き方: " + clickedNumber);
             
             if (clickedNumber === 1){
-                let kigyou ="起業したい" 
+                let kigyou ="起業" 
                 $("#result").text(kigyou);
 
             } else if (clickedNumber === 2){
-                let jigyoushoukei ="事業承継したい" 
+                let jigyoushoukei ="事業承継" 
                 $("#result").text(jigyoushoukei); 
             
-            } if (clickedNumber === 3){
-                let fukugyou ="副業したい" 
+            } else if (clickedNumber === 3){
+                let fukugyou ="副業・兼業" 
                 $("#result").text(fukugyou);
             
-            } if (clickedNumber === 4){
-                let gyoumu ="業務を受けたい" 
+            } else if (clickedNumber === 4){
+                let gyoumu ="業務委託" 
                 $("#result").text(gyoumu);
             
-            } if (clickedNumber === 5){
-                let bora ="ボランティアしたい" 
+            } else if (clickedNumber === 5){
+                let bora ="ボランティア" 
                 $("#result").text(bora);
             }
         });
     });
 </script>
+
+<script>
+    $(document).ready(function() {
+        $(".number2").click(function() {
+            const clickedNumber2 = $(this).data("number");
+            // console.log("クリックされた数値: " + clickedNumber);
+            // $("#result").text("選択した働き方: " + clickedNumber);
+            
+            if (clickedNumber2 === 6){
+                let bousai ="防災・防犯" 
+                $("#result2").text(bousai);
+
+            } else if (clickedNumber2 === 7){
+                let kosodate ="子育て支援" 
+                $("#result2").text(kosodate); 
+            
+            } else if (clickedNumber2 === 8){
+                let fukushi ="福祉・保健衛生" 
+                $("#result2").text(fukushi);
+            
+            } else if (clickedNumber2 === 9){
+                let kankyou ="環境対策" 
+                $("#result2").text(kankyou);
+            
+            } else if (clickedNumber2 === 10){
+                let bunka ="地域活性化・文化振興" 
+                $("#result2").text(bunka);
+            
+            } else if (clickedNumber2 === 11){
+                let toshi ="都市整備" 
+                $("#result2").text(toshi);
+            
+            } else if (clickedNumber2 === 12){
+                let kyouiku ="教育" 
+                $("#result2").text(kyouiku);
+            }
+        });
+    });
+</script>
+
+<script>
+ $(document).ready(function() {
+    // tの色を変更する関数
+    function updateTextColor() {
+        const s1Position = $(".s1").offset().top;
+        const s2Position = $(".s2").offset().top;
+        const s3Position = $(".s3").offset().top;
+        const s4Position = $(".s4").offset().top;
+        const scrollPosition = $(window).scrollTop();
+        const windowHeight = $(window).height();
+
+        // 各セクションが表示されているかをチェックし、tの色を変更
+        if (scrollPosition >= s1Position && scrollPosition < s2Position) {
+            $(".t1").addClass("headerColorScroll");
+            $(".t2, .t3, .t4").removeClass("headerColorScroll");
+        } else if (scrollPosition >= s2Position && scrollPosition < s3Position) {
+            $(".t2").addClass("headerColorScroll");
+            $(".t1, .t3, .t4").removeClass("headerColorScroll");
+        } else if (scrollPosition >= s3Position && scrollPosition < s4Position) {
+            $(".t3").addClass("headerColorScroll");
+            $(".t1, .t2, .t4").removeClass("headerColorScroll");
+        } else if (scrollPosition >= s4Position) {
+            $(".t4").addClass("headerColorScroll");
+            $(".t1, .t2, .t3").removeClass("headerColorScroll");
+        } else {
+            $(".t1, .t2, .t3, .t4").removeClass("headerColorScroll");
+        }
+    }
+
+    // scrollイベントでtの色を更新
+    $(window).on("scroll", function() {
+        updateTextColor();
+    });
+
+    // ページ読み込み時にtの色を更新
+    updateTextColor();
+});
+
+
+
+</script>
+    
+    
 
 </body>
 </html>
