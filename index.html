@@ -16,38 +16,105 @@
             <li>おすすめ情報</li>
         </header>
     
-        <div class="container">
+        <div class="section1">
             <h1>どういう働き方を希望しますか。</h1>
             
             <div class="block">
                 
                 <div class="joudan">
                     <a id="kigyou" class="number" data-number="1" href="#">起業したい</a>
-                    <p id="jigyoushoukei" class="number" data-number="2" href="#">事業承継したい</p>
-                    <p id="fukugyou" class="number" data-number="3" href="#">副業したい</p>
+                    <a id="jigyoushoukei" class="number" data-number="2" href="#">事業承継したい</a>
+                    <a id="fukugyou" class="number" data-number="3" href="#">副業したい</a>
                 </div>
 
                 <div class="gedan">
-                    <p id="gyoumu" class="number" data-number="4" href="#">業務を受けたい</p>
-                    <p id="bora" class="number" data-number="5" href="#">ボランティアしたい</p>
+                    <a id="gyoumu" class="number" data-number="4" href="#">業務を受けたい</a>
+                    <a id="bora" class="number" data-number="5" href="#">ボランティアしたい</a>
                 </div>
             </div>
 
+       
+
+        <div id="kekka">
+            <div id="koumoku">選択した働き方</div>
+            <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
         </div>
 
-        <div id="result"></div> <!-- クリックされた数値を表示する場所 -->
+        <div>次へ</div>
+    </div>
+
+
+
+    <div class="section2">
+        <h1>どういう働き方を希望しますか。</h1>
+        
+        <div class="block">
+            
+            <div class="joudan">
+                <a id="kigyou" class="number" data-number="1" href="#">起業したい</a>
+                <a id="jigyoushoukei" class="number" data-number="2" href="#">事業承継したい</a>
+                <a id="fukugyou" class="number" data-number="3" href="#">副業したい</a>
+            </div>
+
+            <div class="gedan">
+                <a id="gyoumu" class="number" data-number="4" href="#">業務を受けたい</a>
+                <a id="bora" class="number" data-number="5" href="#">ボランティアしたい</a>
+            </div>
+        </div>
+
+   
+
+        <div id="kekka">
+            <div id="koumoku">選択した働き方</div>
+            <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
+        </div>
+
+        <div>次へ</div>
+    </div>
+
 
     </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+<!-- <script>
+    $(document).ready(function() {
+        $(".number").click(function() {
+            const clickedNumber = $(this).data("number");
+            // console.log("クリックされた数値: " + clickedNumber);
+            $("#result").text("選択した働き方: " + clickedNumber);
+        });
+    });
+</script> -->
+
 <script>
     $(document).ready(function() {
         $(".number").click(function() {
-            var clickedNumber = $(this).data("number");
-            console.log("クリックされた数値: " + clickedNumber);
-            $("#result").text("クリックされた数値: " + clickedNumber);
+            const clickedNumber = $(this).data("number");
+            // console.log("クリックされた数値: " + clickedNumber);
+            // $("#result").text("選択した働き方: " + clickedNumber);
+            
+            if (clickedNumber === 1){
+                let kigyou ="起業したい" 
+                $("#result").text(kigyou);
+
+            } else if (clickedNumber === 2){
+                let jigyoushoukei ="事業承継したい" 
+                $("#result").text(jigyoushoukei); 
+            
+            } if (clickedNumber === 3){
+                let fukugyou ="副業したい" 
+                $("#result").text(fukugyou);
+            
+            } if (clickedNumber === 4){
+                let gyoumu ="業務を受けたい" 
+                $("#result").text(gyoumu);
+            
+            } if (clickedNumber === 5){
+                let bora ="ボランティアしたい" 
+                $("#result").text(bora);
+            }
         });
     });
 </script>
