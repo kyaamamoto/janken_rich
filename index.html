@@ -96,9 +96,9 @@
 
    
 
-        <div id="kekka">
+        <div id="kekka3">
             <div id="koumoku">選択した働き方</div>
-            <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
+            <div id="result3">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
         </div>
 
     </div>
@@ -107,6 +107,23 @@
     <div id="section4">
         <h1 class="s4">あなたに最適な情報はこちら</h1>
         
+        <div id="kekka4">
+            <div class="tittle">あなたが選択した働き方</div>
+        <table border="1">
+            <tr>
+                <th class="co"></th>
+                <th class="co">働き方</th>
+                <th class="co">やりたいこと</th>
+                <th class="co">エリア</th>
+            </tr>
+                <td class="r4">選択した内容</td>
+                <td class="r41">希望する働き方</td>
+                <td class="r42">やりたいこと</td>
+                <td class="r43">希望するエリア</td>
+        </table>
+        </div>
+
+
         <div class="block">
             
             <div class="joudan">
@@ -144,12 +161,11 @@
     });
 </script> -->
 
+<!-- クリックしたら数字に合わせて文字を反映させる　働き方Ver -->
 <script>
     $(document).ready(function() {
         $(".number").click(function() {
             const clickedNumber = $(this).data("number");
-            // console.log("クリックされた数値: " + clickedNumber);
-            // $("#result").text("選択した働き方: " + clickedNumber);
             
             if (clickedNumber === 1){
                 let kigyou ="起業" 
@@ -175,12 +191,11 @@
     });
 </script>
 
+<!-- クリックしたら数字に合わせて文字を反映させる　分野Ver -->
 <script>
     $(document).ready(function() {
         $(".number2").click(function() {
             const clickedNumber2 = $(this).data("number");
-            // console.log("クリックされた数値: " + clickedNumber);
-            // $("#result").text("選択した働き方: " + clickedNumber);
             
             if (clickedNumber2 === 6){
                 let bousai ="防災・防犯" 
@@ -214,6 +229,57 @@
     });
 </script>
 
+<!-- クリックしたら数字に合わせて文字を反映させる　エリアVer -->
+<script>
+    $(document).ready(function() {
+        $(".number3").click(function() {
+            const clickedNumber3 = $(this).data("number");
+            
+            if (clickedNumber3 === 13){
+                let hokkaido ="北海道" 
+                $("#result3").text(hokkaido);
+
+            } else if (clickedNumber3 === 14){
+                let tohoku ="東北" 
+                $("#result3").text(tohoku); 
+            
+            } else if (clickedNumber3 === 15){
+                let kanto ="関東" 
+                $("#result3").text(kanto);
+            
+            } else if (clickedNumber3 === 16){
+                let chubu ="中部" 
+                $("#result3").text(chubu);
+            
+            } else if (clickedNumber3 === 17){
+                let kinki ="近畿" 
+                $("#result3").text(kinki);
+            
+            } else if (clickedNumber3 === 18){
+                let chugoku ="中国" 
+                $("#result3").text(chugoku);
+            
+            } else if (clickedNumber3 === 19){
+                let shikoku ="四国" 
+                $("#result3").text(shikoku);
+            
+            } else if (clickedNumber3 === 20){
+                let kyushu ="九州・沖縄" 
+                $("#result3").text(kyushu);
+            }
+        });
+    });
+</script>
+
+<!-- 5/13 08:00働き方の項目にデータを持ってくることに挑戦中 -->
+<script>
+    $(document).getElementById("result").onchange(function(){
+        let hatarakikata = $(this).data("result")
+        $(".r41").text("hatarakikata")
+    })
+</script>
+
+<!-- ヘッダーを固定化させて特定の場所に来た段階で文字の色を変更させる -->
 <script>
  $(document).ready(function() {
     // tの色を変更する関数
