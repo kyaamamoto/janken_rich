@@ -315,83 +315,83 @@ h1 {
 
 
 #kigyou {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/kigyou.jpg);
+    background-image: url(/img/kigyou.jpg);
   }
 
   #bunka {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/bunka.jpg);
+    background-image: url(/img/bunka.jpg);
   }
 
   #jigyoushoukei {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/jigyoushoukei.jpg);
+    background-image: url(/img/jigyoushoukei.jpg);
   }
 
  #bousai {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/bousai.jpg);
+    background-image: url(/img/bousai.jpg);
  }
 
 #toshi {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/toshi.jpg);
+    background-image: url(/img/toshi.jpg);
 }
 
 #fukugyou {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/fukugyou.jpg);
+    background-image: url(/img/fukugyou.jpg);
 }
 
 #kosodate {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/kosodate.jpg);
+    background-image: url(/img/kosodate.jpg);
 }
 
 #kyouiku {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/kyouiku.jpg);
+    background-image: url(/img/kyouiku.jpg);
 }
 
 #gyoumu {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/gyoumu.jpg);
+    background-image: url(/img/gyoumu.jpg);
 }
 
 #fukushi {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/fukushi.jpg);
+    background-image: url(/img/fukushi.jpg);
 }
 
 #bora {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/bora.jpg);
+    background-image: url(/img/bora.jpg);
 }
 
 #kankyou {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/kankyou.jpg);
+    background-image: url(/img/kankyou.jpg);
 }
 
 #hokkaido {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/hokkaido.jpg);
+    background-image: url(/img/hokkaido.jpg);
 }
 
 #tohoku {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/tohoku.jpg);
+    background-image: url(/img/tohoku.jpg);
 }
 
 #chubu {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/chubu.jpg);
+    background-image: url(/img/chubu.jpg);
 }
 
 #kanto {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/kanto.jpg);
+    background-image: url(/img/kanto.jpg);
 }
 
 #kinki {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/kinki.jpg);
+    background-image: url(/img/kinki.jpg);
 }
 
 #chugoku {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/chugoku.jpg);
+    background-image: url(/img/chugoku.jpg);
 }
 
 #shikoku {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/shikoku.jpg);
+    background-image: url(/img/shikoku.jpg);
 }
 
 #kyushu {
-    background-image: url(https://kyaamamoto.github.io/janken_rich/img/kyushu.jpg);
+    background-image: url(/img/kyushu.jpg);
 }
 
 .btn_01 {
@@ -502,4 +502,8 @@ a.btn_02:hover {
       height: 150px;
       object-fit: contain;
     }
+  }
+
+  .spreadsheets--item {
+    list-style: none;
   }
