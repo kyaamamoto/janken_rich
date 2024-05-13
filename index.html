@@ -26,14 +26,14 @@
             <div class="block">
                 
                 <div class="joudan">
-                    <a id="kigyou" class="number" data-number="1" href="#">起業</a>
-                    <a id="jigyoushoukei" class="number" data-number="2" href="#">事業承継</a>
-                    <a id="fukugyou" class="number" data-number="3" href="#">副業・兼業</a>
+                    <a id="kigyou" class="number selected" data-number="1" href="#">起業</a>
+                    <a id="jigyoushoukei" class="number selected" data-number="2" href="#">事業承継</a>
+                    <a id="fukugyou" class="number selected" data-number="3" href="#">副業・兼業</a>
                 </div>
 
                 <div class="gedan">
-                    <a id="gyoumu" class="number" data-number="4" href="#">業務委託</a>
-                    <a id="bora" class="number" data-number="5" href="#">ボランティア</a>
+                    <a id="gyoumu" class="number selected" data-number="4" href="#">業務委託</a>
+                    <a id="bora" class="number selected" data-number="5" href="#">ボランティア</a>
                 </div>
             </div>
         
@@ -59,16 +59,16 @@
         <div class="block">
             
             <div class="joudan">
-                <a id="bousai" class="number2" data-number="6" href="#section2">防災・防犯</a>
-                <a id="kosodate" class="number2" data-number="7" href="#section2">子育て支援</a>
-                <a id="fukushi" class="number2" data-number="8" href="#section2">福祉・保健衛生</a>
+                <a id="bousai" class="number2 selected" data-number="6" href="#section2">防災・防犯</a>
+                <a id="kosodate" class="number2 selected" data-number="7" href="#section2">子育て支援</a>
+                <a id="fukushi" class="number2 selected" data-number="8" href="#section2">福祉・保健衛生</a>
             </div>
 
             <div class="gedan">
-                <a id="kankyou" class="number2" data-number="9" href="#section2">環境対策</a>
-                <a id="bunka" class="number2" data-number="10" href="#section2">地域活性化・文化振興</a>
-                <a id="toshi" class="number2" data-number="11" href="#section2">都市基盤</a>
-                <a id="kyouiku" class="number2" data-number="12" href="#section2">教育</a>
+                <a id="kankyou" class="number2 selected" data-number="9" href="#section2">環境対策</a>
+                <a id="bunka" class="number2 selected" data-number="10" href="#section2">地域活性化・文化振興</a>
+                <a id="toshi" class="number2 selected" data-number="11" href="#section2">都市基盤</a>
+                <a id="kyouiku" class="number2 selected" data-number="12" href="#section2">教育</a>
             </div>
         </div>
 
@@ -92,17 +92,17 @@
         <div class="block">
             
             <div class="joudan">
-                <a id="hokkaido" class="number3" data-number="13" href="#section3">北海道</a>
-                <a id="tohoku" class="number3" data-number="14" href="#section3">東北</a>
-                <a id="kanto" class="number3" data-number="15" href="#section3">関東</a>
-                <a id="chubu" class="number3" data-number="16" href="#section3">中部</a>
+                <a id="hokkaido" class="number3 selected" data-number="13" href="#section3">北海道</a>
+                <a id="tohoku" class="number3 selected" data-number="14" href="#section3">東北</a>
+                <a id="kanto" class="number3 selected" data-number="15" href="#section3">関東</a>
+                <a id="chubu" class="number3 selected" data-number="16" href="#section3">中部</a>
             </div>
 
             <div class="gedan">
-                <a id="kinki" class="number3" data-number="17" href="#section3">近畿</a>
-                <a id="chugoku" class="number3" data-number="18" href="#section3">中国</a>
-                <a id="shikoku" class="number3" data-number="19" href="#section3">四国</a>
-                <a id="kyushu" class="number3" data-number="20" href="#section3">九州・沖縄</a>
+                <a id="kinki" class="number3 selected" data-number="17" href="#section3">近畿</a>
+                <a id="chugoku" class="number3 selected" data-number="18" href="#section3">中国</a>
+                <a id="shikoku" class="number3 selected" data-number="19" href="#section3">四国</a>
+                <a id="kyushu" class="number3 selected" data-number="20" href="#section3">九州・沖縄</a>
             </div>
         </div>
 
@@ -138,6 +138,22 @@
                 <td id="r43">希望するエリア</td>
         </table>
         </div>
+
+        <div class="container">
+            <ul class="spreadsheets">
+              <li class="spreadsheets--item js-base">
+                <img src="" alt="" loading="lazy" class="spreadsheets--img" width="100%" height="auto">
+                <p class="spreadsheets--hatarakiID"></p>
+                <p class="spreadsheets--hataraki"></p>
+                <p class="spreadsheets--howID"></p>
+                <p class="spreadsheets--how"></p>
+                <p class="spreadsheets--areaID"></p>
+                <p class="spreadsheets--area"></p>
+                <p class="spreadsheets--naiyou"></p>
+                <p class="spreadsheets--code"></p>
+              </li>
+            </ul>
+          </div>
 
 
         <!-- <div class="block">
@@ -405,6 +421,88 @@ $(function(){
 
 <!--自作のJS-->
 <script src="js/5-8.js"></script>
+
+<script>
+const baseHtml = document.querySelector('.spreadsheets--item.js-base');
+const spreadsheets = document.querySelector('.spreadsheets');
+const apiURL = 'https://script.google.com/macros/s/AKfycbwTTSXj9zcc0CNzUS1dUp71A0eOzXY43GwmDEPz7nBllOiZeSAtjK23CQAVf6RSiKrb/exec';
+
+async function loadData() {
+  const response = await fetch(apiURL);
+  const data = await response.json();
+  data.forEach(entry => {
+    const copy = baseHtml.cloneNode(true);
+    copy.classList.remove('js-base');
+    copy.querySelector('.spreadsheets--code').textContent = entry.code;
+    copy.querySelector('.spreadsheets--hatarakiID').textContent = entry.hatarakiID;
+    copy.querySelector('.spreadsheets--hataraki').textContent = entry.hataraki;
+    copy.querySelector('.spreadsheets--howID').textContent = entry.howID;
+    copy.querySelector('.spreadsheets--how').textContent = entry.how;
+    copy.querySelector('.spreadsheets--areaID').textContent = entry.areaID;
+    copy.querySelector('.spreadsheets--area').textContent = entry.area;
+    copy.querySelector('.spreadsheets--naiyou').textContent = entry.naiyou;
+    copy.querySelector('.spreadsheets--img').src = entry.image;
+    spreadsheets.appendChild(copy);
+  });
+}
+
+loadData();
+</script>
+
+
+
+<script>
+    $(document).ready(function() {
+        // 初期状態で全てのスプレッドシートの項目を非表示にする
+    $(".spreadsheets--item").hide();
+        // セクション1で選択されたデータ番号を保持する変数
+        let selectedNumber1 = null;
+        // セクション2で選択されたデータ番号を保持する変数
+        let selectedNumber2 = null;
+        // セクション3で選択されたデータ番号を保持する変数
+        let selectedNumber3 = null;
+    
+        // セクション1のクリックイベント
+        $(".number").click(function() {
+            selectedNumber1 = $(this).data("number");
+            updateResult();
+        });
+    
+        // セクション2のクリックイベント
+        $(".number2").click(function() {
+            selectedNumber2 = $(this).data("number");
+            updateResult();
+        });
+    
+        // セクション3のクリックイベント
+        $(".number3").click(function() {
+            selectedNumber3 = $(this).data("number");
+            updateResult();
+        });
+    
+        // コードを生成してスプレッドシートのデータを表示する関数
+        function updateResult() {
+            if (selectedNumber1 !== null && selectedNumber2 !== null && selectedNumber3 !== null) {
+                const code = selectedNumber1.toString() + selectedNumber2.toString() + selectedNumber3.toString();
+                displaySpreadsheetData(code);
+            }
+        }
+    
+        // スプレッドシートからデータを表示する関数
+        function displaySpreadsheetData(code) {
+            $(".spreadsheets--item").hide(); // すべての項目を非表示にする
+    
+            // 条件に合致するコードを持つ項目を表示する
+            $(".spreadsheets--code").each(function() {
+                if ($(this).text() === code) {
+                    $(this).closest(".spreadsheets--item").show();
+                }
+            });
+        }
+    });
+    </script>
+    
+
 
 
 </body>
