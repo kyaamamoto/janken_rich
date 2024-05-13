@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="particles-js"></div>
+    <div id="wrapper">
     <div id="wrap">
         <header>
                     <li class="t1">Q1.働き方</li>
@@ -19,7 +21,8 @@
 <!-- section1 -->
         <div id="section1">
             <h1 class="s1">どういう働き方を希望しますか。</h1>
-            
+            <div class="tittle">（下記の中から1つ選択ください）</div>
+
             <div class="block">
                 
                 <div class="joudan">
@@ -33,20 +36,25 @@
                     <a id="bora" class="number" data-number="5" href="#">ボランティア</a>
                 </div>
             </div>
+        
+            <div id="kekka">
+                <div id="koumoku">選択した働き方</div>
+                <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
+            </div>
 
+            <div class="btn_01">
+                <a class="btn_02" href="#section2">次の質問へ</a>
+            </div>
        
 
-        <div id="kekka">
-            <div id="koumoku">選択した働き方</div>
-            <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
-        </div>
-
+    
     </div>
 
 
 <!-- section2 -->
     <div id="section2">
         <h1 class="s2">どういうことをやりたいですか。</h1>
+        <div class="tittle">（下記の中から1つ選択ください）</div>
         
         <div class="block">
             
@@ -71,11 +79,15 @@
             <div id="result2">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
         </div>
 
+        <div class="btn_01">
+            <a class="scroll btn_02" href="#section3">次の質問へ</a>
+        </div>
     </div>
 
 <!-- section3 -->
     <div id="section3">
         <h1 class="s3">どのエリアを希望しますか。</h1>
+        <div class="tittle">（下記の中から1つ選択ください）</div>
         
         <div class="block">
             
@@ -101,11 +113,15 @@
             <div id="result3">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
         </div>
 
+        <div class="btn_01">
+            <a class="scroll btn_02" href="#section4">おすすめ情報へ</a>
+        </div>
+    
     </div>
 
 <!-- section4 -->
     <div id="section4">
-        <h1 class="s4">あなたに最適な情報はこちら</h1>
+        <h1 class="s4">あなたにおすすめの情報はこちら</h1>
         
         <div id="kekka4">
             <div class="tittle">あなたが選択した働き方</div>
@@ -116,15 +132,15 @@
                 <th class="co">やりたいこと</th>
                 <th class="co">エリア</th>
             </tr>
-                <td class="r4">選択した内容</td>
-                <td class="r41">希望する働き方</td>
-                <td class="r42">やりたいこと</td>
-                <td class="r43">希望するエリア</td>
+                <td id="r4">選択した内容</td>
+                <td id="r41">希望する働き方</td>
+                <td id="r42">やりたいこと</td>
+                <td id="r43">希望するエリア</td>
         </table>
         </div>
 
 
-        <div class="block">
+        <!-- <div class="block">
             
             <div class="joudan">
                 <a id="kigyou" class="number" data-number="1" href="#">起業したい</a>
@@ -142,11 +158,15 @@
 
         <div id="kekka">
             <div id="koumoku">選択した働き方</div>
-            <div id="result">クリック後反映</div> <!-- クリックされた数値を表示する場所 -->
-        </div>
+            <div id="result">クリック後反映</div> 
+        </div> -->
+
+        <!-- TOPに戻るボタン -->
+        <p id="page-top"><a href="#">TOP</a></p>
 
 
     </div>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -170,22 +190,27 @@
             if (clickedNumber === 1){
                 let kigyou ="起業" 
                 $("#result").text(kigyou);
+                $("#r41").text(kigyou);
 
             } else if (clickedNumber === 2){
                 let jigyoushoukei ="事業承継" 
                 $("#result").text(jigyoushoukei); 
+                $("#r41").text(jigyoushoukei);
             
             } else if (clickedNumber === 3){
                 let fukugyou ="副業・兼業" 
                 $("#result").text(fukugyou);
+                $("#r41").text(fukugyou);
             
             } else if (clickedNumber === 4){
                 let gyoumu ="業務委託" 
                 $("#result").text(gyoumu);
+                $("#r41").text(gyoumu);
             
             } else if (clickedNumber === 5){
                 let bora ="ボランティア" 
                 $("#result").text(bora);
+                $("#r41").text(bora);
             }
         });
     });
@@ -200,30 +225,37 @@
             if (clickedNumber2 === 6){
                 let bousai ="防災・防犯" 
                 $("#result2").text(bousai);
+                $("#r42").text(bousai);
 
             } else if (clickedNumber2 === 7){
                 let kosodate ="子育て支援" 
-                $("#result2").text(kosodate); 
+                $("#result2").text(kosodate);
+                $("#r42").text(kosodate); 
             
             } else if (clickedNumber2 === 8){
                 let fukushi ="福祉・保健衛生" 
                 $("#result2").text(fukushi);
+                $("#r42").text(fukushi);
             
             } else if (clickedNumber2 === 9){
                 let kankyou ="環境対策" 
                 $("#result2").text(kankyou);
+                $("#r42").text(kankyou);
             
             } else if (clickedNumber2 === 10){
                 let bunka ="地域活性化・文化振興" 
                 $("#result2").text(bunka);
+                $("#r42").text(bunka);
             
             } else if (clickedNumber2 === 11){
-                let toshi ="都市整備" 
+                let toshi ="都市基盤" 
                 $("#result2").text(toshi);
+                $("#r42").text(toshi);
             
             } else if (clickedNumber2 === 12){
                 let kyouiku ="教育" 
                 $("#result2").text(kyouiku);
+                $("#r42").text(kyouiku);
             }
         });
     });
@@ -238,34 +270,42 @@
             if (clickedNumber3 === 13){
                 let hokkaido ="北海道" 
                 $("#result3").text(hokkaido);
+                $("#r43").text(hokkaido);
 
             } else if (clickedNumber3 === 14){
                 let tohoku ="東北" 
                 $("#result3").text(tohoku); 
+                $("#r43").text(tohoku);
             
             } else if (clickedNumber3 === 15){
                 let kanto ="関東" 
                 $("#result3").text(kanto);
+                $("#r43").text(kanto);
             
             } else if (clickedNumber3 === 16){
                 let chubu ="中部" 
                 $("#result3").text(chubu);
+                $("#r43").text(chubu);
             
             } else if (clickedNumber3 === 17){
                 let kinki ="近畿" 
                 $("#result3").text(kinki);
+                $("#r43").text(kinki);
             
             } else if (clickedNumber3 === 18){
                 let chugoku ="中国" 
                 $("#result3").text(chugoku);
+                $("#r43").text(chugoku);
             
             } else if (clickedNumber3 === 19){
                 let shikoku ="四国" 
                 $("#result3").text(shikoku);
+                $("#r43").text(shikoku);
             
             } else if (clickedNumber3 === 20){
                 let kyushu ="九州・沖縄" 
                 $("#result3").text(kyushu);
+                $("#r43").text(kyushu);
             }
         });
     });
@@ -273,10 +313,16 @@
 
 <!-- 5/13 08:00働き方の項目にデータを持ってくることに挑戦中 -->
 <script>
-    $(document).getElementById("result").onchange(function(){
-        let hatarakikata = $(this).data("result")
-        $(".r41").text("hatarakikata")
-    })
+
+    // let r41 = document.getElementsById("result");
+    // document.getElementsByClassName("r41").r41Content
+
+//        $(document).ready(function() {
+//         $(".number").click(function() {
+//             const hatarakikata = $(this).getElementById("#result");
+//             $(".r41").attr(hatarakikata)
+//     })
+// })
 </script>
 
 <!-- ヘッダーを固定化させて特定の場所に来た段階で文字の色を変更させる -->
@@ -319,10 +365,47 @@
 });
 
 
+</script>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script>
+$(function(){
+    $('a[href^=#]').click(function() {
+    var speed = 500; // スクロール速度(ミリ秒)
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $('html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+});
+});
 </script>
     
     
+<script>
+    $(function(){
+  var pagetop = $('#page-top');
+  pagetop.hide();
+  $(window).scroll(function () {
+     if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+     } else {
+          pagetop.fadeOut();
+     }
+  });
+  pagetop.click(function () {
+     $('body, html').animate({ scrollTop: 0 }, 500);
+     return false;
+  });
+});
+</script>
+
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!--自作のJS-->
+<script src="js/5-8.js"></script>
+
 
 </body>
 </html>
