@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://kyaamamoto.github.io/janken_rich/css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -26,14 +26,14 @@
             <div class="block">
                 
                 <div class="joudan">
-                    <a id="kigyou" class="number selected" data-number="1" href="#">起業</a>
-                    <a id="jigyoushoukei" class="number selected" data-number="2" href="#">事業承継</a>
-                    <a id="fukugyou" class="number selected" data-number="3" href="#">副業・兼業</a>
+                    <a id="kigyou" class="number selected" data-number="1" href="#section2">起業</a>
+                    <a id="jigyoushoukei" class="number selected" data-number="2" href="#section2">事業承継</a>
+                    <a id="fukugyou" class="number selected" data-number="3" href="#section2">副業・兼業</a>
                 </div>
 
                 <div class="gedan">
-                    <a id="gyoumu" class="number selected" data-number="4" href="#">業務委託</a>
-                    <a id="bora" class="number selected" data-number="5" href="#">ボランティア</a>
+                    <a id="gyoumu" class="number selected" data-number="4" href="#section2">業務委託</a>
+                    <a id="bora" class="number selected" data-number="5" href="#section2">ボランティア</a>
                 </div>
             </div>
         
@@ -53,22 +53,22 @@
 
 <!-- section2 -->
     <div id="section2">
-        <h1 class="s2">どういうことをやりたいですか。</h1>
+        <h1 id="sc2" class="s2">どういうことをやりたいですか。</h1>
         <div class="tittle">（下記の中から1つ選択ください）</div>
         
         <div class="block">
             
             <div class="joudan">
-                <a id="bousai" class="number2 selected" data-number="6" href="#section2">防災・防犯</a>
-                <a id="kosodate" class="number2 selected" data-number="7" href="#section2">子育て支援</a>
-                <a id="fukushi" class="number2 selected" data-number="8" href="#section2">福祉・保健衛生</a>
+                <a id="bousai" class="number2 selected" data-number="6" href="#section3">防災・防犯</a>
+                <a id="kosodate" class="number2 selected" data-number="7" href="#section3">子育て支援</a>
+                <a id="fukushi" class="number2 selected" data-number="8" href="#section3">福祉・保健衛生</a>
             </div>
 
             <div class="gedan">
-                <a id="kankyou" class="number2 selected" data-number="9" href="#section2">環境対策</a>
-                <a id="bunka" class="number2 selected" data-number="10" href="#section2">地域活性化・文化振興</a>
-                <a id="toshi" class="number2 selected" data-number="11" href="#section2">都市基盤</a>
-                <a id="kyouiku" class="number2 selected" data-number="12" href="#section2">教育</a>
+                <a id="kankyou" class="number2 selected" data-number="9" href="#section3">環境対策</a>
+                <a id="bunka" class="number2 selected" data-number="10" href="#section3">地域活性化・文化振興</a>
+                <a id="toshi" class="number2 selected" data-number="11" href="#section3">都市基盤</a>
+                <a id="kyouiku" class="number2 selected" data-number="12" href="#section3">教育</a>
             </div>
         </div>
 
@@ -92,17 +92,17 @@
         <div class="block">
             
             <div class="joudan">
-                <a id="hokkaido" class="number3 selected" data-number="13" href="#section3">北海道</a>
-                <a id="tohoku" class="number3 selected" data-number="14" href="#section3">東北</a>
-                <a id="kanto" class="number3 selected" data-number="15" href="#section3">関東</a>
-                <a id="chubu" class="number3 selected" data-number="16" href="#section3">中部</a>
+                <a id="hokkaido" class="number3 selected" data-number="13" href="#section4">北海道</a>
+                <a id="tohoku" class="number3 selected" data-number="14" href="#section4">東北</a>
+                <a id="kanto" class="number3 selected" data-number="15" href="#section4">関東</a>
+                <a id="chubu" class="number3 selected" data-number="16" href="#section4">中部</a>
             </div>
 
             <div class="gedan">
-                <a id="kinki" class="number3 selected" data-number="17" href="#section3">近畿</a>
-                <a id="chugoku" class="number3 selected" data-number="18" href="#section3">中国</a>
-                <a id="shikoku" class="number3 selected" data-number="19" href="#section3">四国</a>
-                <a id="kyushu" class="number3 selected" data-number="20" href="#section3">九州・沖縄</a>
+                <a id="kinki" class="number3 selected" data-number="17" href="#section4">近畿</a>
+                <a id="chugoku" class="number3 selected" data-number="18" href="#section4">中国</a>
+                <a id="shikoku" class="number3 selected" data-number="19" href="#section4">四国</a>
+                <a id="kyushu" class="number3 selected" data-number="20" href="#section4">九州・沖縄</a>
             </div>
         </div>
 
@@ -383,12 +383,12 @@
 
 </script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <script>
 $(function(){
     $('a[href^=#]').click(function() {
-    var speed = 500; // スクロール速度(ミリ秒)
+    var speed = 1500; // スクロール速度(ミリ秒)
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top;
@@ -417,10 +417,10 @@ $(function(){
 });
 </script>
 
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <!--自作のJS-->
-<script src="js/5-8.js"></script>
+<script src="https://kyaamamoto.github.io/janken_rich/js/5-8.js"></script>
 
 <script>
 const baseHtml = document.querySelector('.spreadsheets--item.js-base');

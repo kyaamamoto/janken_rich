@@ -1,7 +1,7 @@
 particlesJS("particles-js",{
 	"particles":{
 		"number":{
-			"value":100,//この数値を変更すると紙吹雪の数が増減できる
+			"value":125,//この数値を変更すると紙吹雪の数が増減できる
 			"density":{
 				"enable":false,
 				"value_area":400
